@@ -1,0 +1,429 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+
+<meta name="theme-color" content="#080808">
+
+<title>Stock Market Community</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    min-height:100dvh;
+    min-height:100svh;
+    overflow-x:hidden;
+
+    font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+    color:#fff;
+
+    background:
+    radial-gradient(
+        circle at 80% 0%,
+        rgba(222,177,65,.16),
+        transparent 34%
+    ),
+    #080808;
+}
+
+.page{
+    min-height:100dvh;
+    min-height:100svh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:
+    max(18px,env(safe-area-inset-top))
+    16px
+    max(12px,env(safe-area-inset-bottom));
+}
+
+.card{
+    width:100%;
+    max-width:460px;
+
+    padding:30px 21px 18px;
+
+    border-radius:31px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.018)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.09);
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.55);
+
+    backdrop-filter:blur(22px);
+
+    text-align:center;
+
+    animation:enter .65s ease both;
+}
+
+.logo{
+    width:80px;
+    height:80px;
+
+    margin:0 auto 19px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f2d477,
+        #aa791b
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:
+    0 16px 35px rgba(214,168,49,.2);
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.logo span{
+    color:#111;
+    font-size:31px;
+    font-weight:900;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+
+    padding:8px 12px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.09);
+
+    background:rgba(255,255,255,.04);
+
+    color:#c9c9c9;
+
+    font-size:9px;
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    margin-bottom:17px;
+}
+
+.dot{
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#5bd992;
+
+    box-shadow:0 0 10px #5bd992;
+}
+
+h1{
+    font-size:clamp(31px,8vw,44px);
+
+    line-height:1.05;
+
+    letter-spacing:-1.8px;
+
+    margin-bottom:14px;
+}
+
+h1 span{
+    color:#dfb84e;
+}
+
+.desc{
+    max-width:370px;
+
+    margin:auto;
+
+    color:#9b9b9b;
+
+    font-size:14px;
+
+    line-height:1.65;
+}
+
+.telegram{
+    width:100%;
+
+    min-height:59px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    margin-top:25px;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f3d77c,
+        #bd8d29
+    );
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:850;
+
+    box-shadow:
+    0 15px 30px rgba(200,151,43,.18);
+
+    transition:
+    transform .18s ease,
+    filter .18s ease;
+}
+
+.telegram:hover{
+    filter:brightness(1.07);
+}
+
+.telegram:active{
+    transform:scale(.97);
+}
+
+.telegram-icon{
+    font-size:20px;
+}
+
+.disclaimer{
+    margin-top:13px;
+
+    color:#646464;
+
+    font-size:9px;
+
+    line-height:1.5;
+}
+
+/* SNOW ADS CREDIT */
+
+.agency{
+    margin-top:18px;
+
+    padding-top:13px;
+
+    border-top:
+    1px solid rgba(255,255,255,.06);
+
+    font-size:8px;
+
+    color:#555;
+}
+
+.agency a{
+    color:#8b8b8b;
+
+    text-decoration:none;
+
+    font-weight:700;
+}
+
+.agency a:hover{
+    color:#d7b24b;
+}
+
+@keyframes enter{
+
+    from{
+        opacity:0;
+        transform:
+        translateY(25px)
+        scale(.98);
+    }
+
+    to{
+        opacity:1;
+        transform:none;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<main class="page">
+
+<section class="card">
+
+
+    <!-- CLIENT LOGO -->
+
+    <div class="logo">
+
+        <img
+        src="logo.png"
+        alt="Client Logo"
+        onerror="
+        this.style.display='none';
+        this.parentElement.innerHTML='<span>₹</span>';
+        "
+        >
+
+    </div>
+
+
+    <div class="badge">
+
+        <span class="dot"></span>
+
+        STOCK MARKET COMMUNITY
+
+    </div>
+
+
+    <h1>
+
+        Learn The Market.<br>
+
+        <span>Trade Smarter.</span>
+
+    </h1>
+
+
+    <p class="desc">
+
+        Join our Telegram community for market
+        updates, educational content and trading
+        discussions.
+
+    </p>
+
+
+    <!-- CLIENT TELEGRAM -->
+
+    <a
+    id="telegramButton"
+    class="telegram"
+    href="#"
+    target="_blank"
+    rel="noopener noreferrer"
+    >
+
+        <span class="telegram-icon">✈</span>
+
+        Join Telegram Community
+
+    </a>
+
+
+    <p class="disclaimer">
+
+        Educational content only.
+        Trading and investing involve risk.
+
+    </p>
+
+
+    <!-- SNOW ADS AGENCY -->
+
+    <div class="agency">
+
+        Ads managed by
+
+        <a
+        id="agencyLink"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+
+        Snow Ads Agency
+
+        </a>
+
+    </div>
+
+
+</section>
+
+</main>
+
+
+<script>
+
+/* =========================================
+   CLIENT TELEGRAM LINK
+   CHANGE THIS
+   ========================================= */
+
+const TELEGRAM_LINK =
+"https://t.me/YOUR_CLIENT_TELEGRAM";
+
+
+/* =========================================
+   YOUR SNOW ADS AGENCY LINK
+   CHANGE THIS
+   ========================================= */
+
+const AGENCY_LINK =
+"https://YOUR-SNOW-AGENCY-LINK.com";
+
+
+/* APPLY LINKS */
+
+document.getElementById("telegramButton").href =
+TELEGRAM_LINK;
+
+document.getElementById("agencyLink").href =
+AGENCY_LINK;
+
+</script>
+
+</body>
+</html>
+```
