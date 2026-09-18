@@ -1,445 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1602875331517394');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1602875331517394&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 
-<meta name="viewport"
-content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-
-<meta name="theme-color" content="#080808">
-
-<title>HOLD WITH PRIYANK</title>
+<title>The Market Room</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    -webkit-tap-highlight-color:transparent;
-}
-
-html,body{
-    width:100%;
-    min-height:100%;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
     min-height:100dvh;
-    min-height:100svh;
-    overflow-x:hidden;
-
-    font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-
-    color:#fff;
-
-    background:
-    radial-gradient(
-        circle at 80% 0%,
-        rgba(222,177,65,.16),
-        transparent 34%
-    ),
-    #080808;
-}
-
-.page{
-    min-height:100dvh;
-    min-height:100svh;
-
+    background:#111;
+    color:#f5f5f5;
+    font-family:Georgia,"Times New Roman",serif;
     display:flex;
     align-items:center;
     justify-content:center;
+}
 
-    padding:
-    max(18px,env(safe-area-inset-top))
-    16px
-    max(12px,env(safe-area-inset-bottom));
+.wrapper{
+    width:100%;
+    max-width:580px;
+    padding:20px;
 }
 
 .card{
-    width:100%;
-    max-width:460px;
-
-    padding:30px 21px 18px;
-
-    border-radius:31px;
-
-    background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.07),
-        rgba(255,255,255,.018)
-    );
-
-    border:
-    1px solid rgba(255,255,255,.09);
-
-    box-shadow:
-    0 30px 80px rgba(0,0,0,.55);
-
-    backdrop-filter:blur(22px);
-
+    background:#171717;
+    border:1px solid #303030;
+    padding:45px 30px 38px;
+    border-radius:4px;
     text-align:center;
+    animation:reveal .8s ease;
+}
 
-    animation:enter .65s ease both;
+@keyframes reveal{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:none}
+}
+
+.topline{
+    width:50px;
+    height:2px;
+    background:#fff;
+    margin:0 auto 25px;
 }
 
 .logo{
-    width:80px;
-    height:80px;
-
-    margin:0 auto 19px;
-
-    border-radius:25px;
-
-    overflow:hidden;
-
-    background:
-    linear-gradient(
-        135deg,
-        #f2d477,
-        #aa791b
-    );
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    box-shadow:
-    0 16px 35px rgba(214,168,49,.2);
-}
-
-.logo img{
-    width:100%;
-    height:100%;
+    width:88px;
+    height:88px;
     object-fit:cover;
-}
-
-.logo span{
-    color:#111;
-    font-size:31px;
-    font-weight:900;
-}
-
-.badge{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-
-    padding:8px 12px;
-
-    border-radius:50px;
-
-    border:1px solid rgba(255,255,255,.09);
-
-    background:rgba(255,255,255,.04);
-
-    color:#c9c9c9;
-
-    font-size:9px;
-    font-weight:800;
-
-    letter-spacing:.5px;
-
-    margin-bottom:17px;
-}
-
-.dot{
-    width:6px;
-    height:6px;
-
     border-radius:50%;
+    margin-bottom:22px;
+    border:1px solid #444;
+}
 
-    background:#5bd992;
-
-    box-shadow:0 0 10px #5bd992;
+.eyebrow{
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    letter-spacing:3px;
+    color:#888;
+    margin-bottom:18px;
 }
 
 h1{
-    font-size:clamp(31px,8vw,44px);
-
-    line-height:1.05;
-
-    letter-spacing:-1.8px;
-
-    margin-bottom:14px;
+    font-size:42px;
+    line-height:1;
+    font-weight:500;
+    margin-bottom:18px;
 }
 
-h1 span{
-    color:#dfb84e;
+h1 em{
+    color:#aaa;
 }
 
-.desc{
-    max-width:370px;
-
+.description{
+    max-width:430px;
     margin:auto;
-
-    color:#9b9b9b;
-
+    color:#999;
+    font-family:Arial,sans-serif;
     font-size:14px;
-
-    line-height:1.65;
+    line-height:1.7;
+    margin-bottom:28px;
 }
 
-.telegram{
-    width:100%;
+.divider{
+    height:1px;
+    background:#2c2c2c;
+    margin-bottom:25px;
+}
 
-    min-height:59px;
-
+.info{
     display:flex;
-    align-items:center;
     justify-content:center;
-    gap:9px;
-
-    margin-top:25px;
-
-    border-radius:18px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #f3d77c,
-        #bd8d29
-    );
-
-    color:#111;
-
-    text-decoration:none;
-
-    font-size:15px;
-
-    font-weight:850;
-
-    box-shadow:
-    0 15px 30px rgba(200,151,43,.18);
-
-    transition:
-    transform .18s ease,
-    filter .18s ease;
+    gap:30px;
+    margin-bottom:28px;
+    font-family:Arial,sans-serif;
 }
 
-.telegram:hover{
-    filter:brightness(1.07);
+.info div{
+    text-align:center;
 }
 
-.telegram:active{
-    transform:scale(.97);
+.info strong{
+    display:block;
+    font-size:12px;
+    margin-bottom:5px;
 }
 
-.telegram-icon{
-    font-size:20px;
-}
-
-.disclaimer{
-    margin-top:13px;
-
-    color:#646464;
-
+.info span{
     font-size:9px;
-
-    line-height:1.5;
+    color:#666;
 }
 
-/* SNOW ADS CREDIT */
+.join{
+    display:block;
+    background:#f4f4f4;
+    color:#111;
+    text-decoration:none;
+    padding:17px;
+    border-radius:3px;
+    font-family:Arial,sans-serif;
+    font-weight:800;
+    font-size:13px;
+    letter-spacing:.5px;
+    transition:.25s;
+}
+
+.join:hover{
+    background:#fff;
+    transform:translateY(-2px);
+}
+
+.risk{
+    font-family:Arial,sans-serif;
+    font-size:9px;
+    color:#555;
+    margin-top:15px;
+}
 
 .agency{
-    margin-top:18px;
-
-    padding-top:13px;
-
-    border-top:
-    1px solid rgba(255,255,255,.06);
-
-    font-size:8px;
-
+    position:fixed;
+    bottom:max(9px,env(safe-area-inset-bottom));
+    width:100%;
+    text-align:center;
+    font-family:Arial,sans-serif;
     color:#555;
+    font-size:10px;
 }
 
 .agency a{
-    color:#8b8b8b;
-
+    color:#777;
     text-decoration:none;
-
-    font-weight:700;
 }
 
-.agency a:hover{
-    color:#d7b24b;
-}
+@media(max-width:430px){
 
-@keyframes enter{
-
-    from{
-        opacity:0;
-        transform:
-        translateY(25px)
-        scale(.98);
+    .card{
+        padding:35px 20px 30px;
     }
 
-    to{
-        opacity:1;
-        transform:none;
+    h1{
+        font-size:34px;
+    }
+
+    .info{
+        gap:18px;
     }
 
 }
-
 </style>
-
 </head>
 
 <body>
 
-<main class="page">
+<div class="wrapper">
 
-<section class="card">
+<div class="card">
 
+<div class="topline"></div>
 
-    <!-- CLIENT LOGO -->
+<img src="logo.png" class="logo" alt="Community Logo">
 
-    <div class="logo">
+<div class="eyebrow">
+THE MARKET ROOM
+</div>
 
-        <img
-        src="logo.png"
-        alt="Client Logo"
-        onerror="
-        this.style.display='none';
-        this.parentElement.innerHTML='<span>₹</span>';
-        "
-        >
+<h1>
+Where Markets<br>
+Meet <em>Community.</em>
+</h1>
 
-    </div>
+<p class="description">
+Join the Telegram community for market conversations,
+educational insights and regular market-related updates.
+</p>
 
+<div class="divider"></div>
 
-    <div class="badge">
+<div class="info">
 
-        <span class="dot"></span>
+<div>
+<strong>MARKETS</strong>
+<span>DISCUSSION</span>
+</div>
 
-        HOLD WITH PRIYANK
+<div>
+<strong>TELEGRAM</strong>
+<span>COMMUNITY</span>
+</div>
 
-    </div>
+<div>
+<strong>INSIGHTS</strong>
+<span>EDUCATIONAL</span>
+</div>
 
+</div>
 
-    <h1>
+<a id="telegramButton"
+class="join"
+href="#"
+target="_blank"
+rel="noopener noreferrer">
+ENTER THE MARKET ROOM →
+</a>
 
-        Learn The Market.<br>
+<div class="risk">
+Educational purposes only. Trading and investing involve risk.
+</div>
 
-        <span>Trade Smarter.</span>
+</div>
 
-    </h1>
+</div>
 
-
-    <p class="desc">
-
-        Join our Telegram community for market
-        updates, educational content and trading
-        discussions.
-
-    </p>
-
-
-    <!-- CLIENT TELEGRAM -->
-
-    <a
-    id="telegramButton"
-    class="telegram"
-    href="#"
-    target="_blank"
-    rel="noopener noreferrer"
-    >
-
-        <span class="telegram-icon">✈</span>
-
-        Join Telegram Community
-
-    </a>
-
-
-    <p class="disclaimer">
-
-        Educational content only.
-        Trading and investing involve risk.
-
-    </p>
-
-
-    <!-- SNOW ADS AGENCY -->
-
-    <div class="agency">
-
-        Ads managed by
-
-        <a
-        id="agencyLink"
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        >
-
-        Snow Ads Agency
-
-        </a>
-
-    </div>
-
-
-</section>
-
-</main>
-
+<div class="agency">
+Ads managed by
+<a id="agencyLink"
+href="#"
+target="_blank"
+rel="noopener noreferrer">
+Snow Ads Agency
+</a>
+</div>
 
 <script>
 
-/* =========================================
-   CLIENT TELEGRAM LINK
-   CHANGE THIS
-   ========================================= */
+const META_PIXEL_ID = "YOUR_PIXEL_ID";
+const TELEGRAM_LINK = "https://t.me/YOUR_CLIENT_TELEGRAM";
+const AGENCY_LINK = "https://YOUR-SNOW-AGENCY-LINK.com";
 
-const TELEGRAM_LINK =
-"https://t.me/+PZYQK-20GNI0NDg1";
+document.getElementById("telegramButton").href=TELEGRAM_LINK;
+document.getElementById("agencyLink").href=AGENCY_LINK;
 
+if(META_PIXEL_ID && META_PIXEL_ID!=="YOUR_PIXEL_ID"){
 
-/* =========================================
-   YOUR SNOW ADS AGENCY LINK
-   CHANGE THIS
-   ========================================= */
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?
+n.callMethod.apply(n,arguments):
+n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}
+(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-const AGENCY_LINK =
-"https://t.me/+cvb_x5G0F5MwY2Fl";
+fbq('init',META_PIXEL_ID);
+fbq('track','PageView');
 
+}
 
-/* APPLY LINKS */
+document.getElementById("telegramButton")
+.addEventListener("click",function(){
 
-document.getElementById("telegramButton").href =
-TELEGRAM_LINK;
+if(typeof fbq==="function"){
+fbq('trackCustom','TelegramJoinClick');
+}
 
-document.getElementById("agencyLink").href =
-AGENCY_LINK;
+});
 
 </script>
 
 </body>
 </html>
-```
